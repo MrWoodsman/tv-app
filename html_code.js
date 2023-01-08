@@ -17,10 +17,8 @@ var data = [`
     </div>
 
     <div class="weather_box">
-        <div class="flex row end">
-            <!-- <div class="coldown_animate" style="--coldown_num: 5s"><div class="dot"></div><i class="bi bi-clock"></i></div> -->
-            <h1 class="loaction_js"></h1>
-        </div>
+        <div class="coldown_animate" style="--coldown_num: 5s"><div class="dot"></div><i class="bi bi-clock"></i></div>
+        <h1 class="loaction_js"></h1>
         <h1 class="description_js"></h1>
         <h1 class="temperature_js"></h1>
     </div>

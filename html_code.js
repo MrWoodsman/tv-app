@@ -22,7 +22,7 @@ var data = [`
         <h1 class="description_js"></h1>
         <h1 class="temperature_js"></h1>
     </div>
-
+    <input type="text" id="test_input" placeholder="Wpisz coś...">
     <button id="test_btn" onclick="document.querySelector('#test_btn').innerText = Math.round(Math.random(0,10)*10)">KLIKNIJ MNIE</button>
 </body>
     <script src="index.js"></script>

@@ -22,11 +22,13 @@ body {
   top: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   gap: 16px;
 }
 .custom_box_1 h1 {
-  line-height: 100%;
+  line-height: 60%;
+  text-transform: capitalize;
 }
 
 .calendar_js {
@@ -47,6 +49,9 @@ body {
   background: hsl(0deg, 0%, 20%);
   font-weight: 700;
 }
+.calendar_js .empty {
+  color: rgba(255, 255, 255, 0.4);
+}
 .calendar_js .today {
-  background: hsl(0deg, 0%, 40%) !important;
+  background: hsl(0deg, 0%, 50%) !important;
 }/*# sourceMappingURL=style.css.map */

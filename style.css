@@ -20,7 +20,33 @@ body {
   position: absolute;
   left: 16px;
   top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 .custom_box_1 h1 {
   line-height: 100%;
+}
+
+.calendar_js {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.calendar_js .day {
+  font-size: 0.6rem;
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+.calendar_js .day:nth-child(7n) {
+  background: hsl(0deg, 0%, 20%);
+  font-weight: 700;
+}
+.calendar_js .today {
+  background: hsl(0deg, 0%, 40%) !important;
 }/*# sourceMappingURL=style.css.map */

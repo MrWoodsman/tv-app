@@ -9,6 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 * {
@@ -16,18 +17,44 @@ body {
   padding: 0;
 }
 
+:root {
+  --pad_size: 32px;
+}
+
 .custom_box_1 {
   position: absolute;
-  left: 16px;
-  top: 16px;
+  left: var(--pad_size);
+  top: var(--pad_size);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 16px;
 }
 .custom_box_1 h1 {
-  line-height: 60%;
+  font-size: 2.25rem;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+
+.weather_box {
+  position: absolute;
+  right: var(--pad_size);
+  top: var(--pad_size);
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+.weather_box .loaction_js {
+  font-size: 3rem;
+}
+.weather_box h1 {
+  line-height: 100%;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+}
+.weather_box .description_js {
+  line-height: 100%;
+  font-size: 1.5rem;
   text-transform: capitalize;
 }
 

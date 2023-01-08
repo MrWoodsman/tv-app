@@ -81,11 +81,11 @@ let weather = {
     apiKey: "f3e96ff271a2a483f1620d7d1a347913",
     fetchWeather: function (city) {
     fetch(
-        // "https://api.openweathermap.org/data/2.5/weather?q=" +
-        // city +
-        // "&units=metric&appid=" +
-        // this.apiKey + "&lang=pl"
-        "https://api.openweathermap.org/data/2.5/weather?lat=50.9833294&lon=22.1499994&exclude=hourly,daily&units=metric&appid=" + this.apiKey + "&lang=pl"
+        "https://api.openweathermap.org/data/2.5/weather?q=" +
+        city +
+        "&units=metric&appid=" +
+        this.apiKey + "&lang=pl"
+        // "https://api.openweathermap.org/data/2.5/weather?lat=50.9833294&lon=22.1499994&exclude=hourly,daily&units=metric&appid=" + this.apiKey + "&lang=pl"
     )
         .then((response) => {
         if (!response.ok) {
@@ -146,4 +146,4 @@ weather.fetchWeather("Urzędów");
 function reload() {
     weather.fetchWeather("Urzędów");
 }
-var intervalReload = setInterval(reload,15000)
+var intervalReload = setInterval(reload,5000)

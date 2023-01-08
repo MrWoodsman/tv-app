@@ -84,25 +84,14 @@ body {
   background: hsl(0deg, 0%, 50%) !important;
 }
 
-.flex {
-  text-align: right;
-  display: flex;
-  gap: 8px;
-}
-
-.flex.row {
-  flex-direction: row;
-  justify-content: end;
-  align-items: center;
-}
-
 .coldown_animate {
   height: 25px;
   aspect-ratio: 1;
-  transform: translateY(-2px);
   border-radius: 50%;
   border: 2px solid white;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   overflow: hidden;
 }
 .coldown_animate .dot {

@@ -75,3 +75,75 @@ function daysInMonth (month, year) {
         return new Date(year, month+1, 0);
     }
 }
+
+//! SLIDE SHOW
+let weather = {
+    apiKey: "f3e96ff271a2a483f1620d7d1a347913",
+    fetchWeather: function (city) {
+    fetch(
+        // "https://api.openweathermap.org/data/2.5/weather?q=" +
+        // city +
+        // "&units=metric&appid=" +
+        // this.apiKey + "&lang=pl"
+        "https://api.openweathermap.org/data/2.5/weather?lat=50.9833294&lon=22.1499994&exclude=hourly,daily&units=metric&appid=" + this.apiKey + "&lang=pl"
+    )
+        .then((response) => {
+        if (!response.ok) {
+            //alert("No weather found.");
+            throw new Error("No weather found.");
+            }
+            return response.json();
+        })
+        .then((data) => this.displayWeather(data));
+    },
+    displayWeather: function (data) {
+    const { name } = data;
+    const { icon, description } = data.weather[0];
+    const { temp, humidity } = data.main;
+    const { speed } = data.wind;
+    // console.warn(temp + "°C");
+    document.querySelectorAll('.temperature_js').forEach((e) => {
+        e.innerHTML = temp + "°C"
+    })
+    document.querySelectorAll('.loaction_js').forEach((e) => {
+        e.innerHTML = name
+    })
+    document.querySelectorAll('.description_js').forEach((e) => {
+        e.innerHTML = description
+    })
+    //   document.querySelector(".city").innerText = "Pogoda w " + name;
+    //   document.querySelector(".icon").src =
+    //     "https://openweathermap.org/img/wn/" + icon + ".png";
+    //   document.querySelector(".description").innerText = description;
+    //   document.querySelector(".temp").innerText = temp + "°C";
+    //   document.querySelector(".humidity").innerText =
+    //     "Wilgotność: " + humidity + "%";
+    //   document.querySelector(".wind").innerText =
+    //     "Prędkość wiatru: " + speed + " km/h";
+    //   document.querySelector(".weather").classList.remove("loading");
+    //   document.body.style.backgroundImage =
+    //     "url('https://source.unsplash.com/1600x900/?" + name + "')";
+    },
+    search: function () {
+        this.fetchWeather(document.querySelector(".search-bar").value);
+    },
+};
+
+//   document.querySelector(".search button").addEventListener("click", function () {
+    // weather.search();
+//   });
+
+//   document
+//     .querySelector(".search-bar")
+//     .addEventListener("keyup", function (event) {
+//       if (event.key == "Enter") {
+//         weather.search();
+//       }
+//     });
+
+weather.fetchWeather("Urzędów");
+
+function reload() {
+    weather.fetchWeather("Urzędów");
+}
+var intervalReload = setInterval(reload,15000)

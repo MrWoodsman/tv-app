@@ -22,8 +22,31 @@ var data = [`
         <h1 class="description_js"></h1>
         <h1 class="temperature_js"></h1>
     </div>
-    <input type="text" id="test_input" placeholder="Wpisz coś...">
-    <button id="test_btn" onclick="document.querySelector('#test_btn').innerText = Math.round(Math.random(0,10)*10)">KLIKNIJ MNIE</button>
+    <!-- <input type="text" id="test_input" placeholder="Wpisz coś..."> -->
+    <!-- <button id="test_btn" onclick="document.querySelector('#test_btn').innerText = Math.round(Math.random(0,10)*10)">KLIKNIJ MNIE</button> -->
+
+    <div class="note_list">
+        <div class="note">
+            <h1>Title</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, saepe! Exercitationem tempore nobis facilis a, ducimus nam quidem dicta omnis, dolor similique nulla animi dolores consequatur fugit, saepe iste. Aut!</p>
+        </div>
+        <div class="note">
+            <h1>Title</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, saepe! Exercitationem tempore nobis facilis a, ducimus nam quidem dicta omnis, dolor similique nulla animi dolores consequatur fugit, saepe iste. Aut!</p>
+        </div>
+        <div class="note">
+            <h1>Title</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, saepe! Exercitationem tempore nobis facilis a, ducimus nam quidem dicta omnis, dolor similique nulla animi dolores consequatur fugit, saepe iste. Aut!</p>
+        </div>
+        <div class="note">
+            <h1>Title</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, saepe! Exercitationem tempore nobis facilis a, ducimus nam quidem dicta omnis, dolor similique nulla animi dolores consequatur fugit, saepe iste. Aut!</p>
+        </div>
+        <div class="note">
+            <h1>Title</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, saepe! Exercitationem tempore nobis facilis a, ducimus nam quidem dicta omnis, dolor similique nulla animi dolores consequatur fugit, saepe iste. Aut!</p>
+        </div>
+    </div>
 </body>
     <script src="index.js"></script>
 </html>

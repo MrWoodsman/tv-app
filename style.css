@@ -99,7 +99,7 @@ body {
   transform: translate(-50%, 0%);
   left: 50%;
   bottom: 0%;
-  width: 100%;
+  width: 150%;
   height: 10%;
   background: rgba(255, 255, 255, 0.5);
   -webkit-animation: load var(--coldown_num) linear infinite;
@@ -136,4 +136,29 @@ body {
 
 #test_input {
   padding: 8px 16px;
+}
+
+.note_list {
+  position: absolute;
+  left: var(--pad_size);
+  bottom: var(--pad_size);
+  width: 40%;
+  max-height: 50%;
+  overflow-x: hidden;
+}
+.note_list .note {
+  --borderSize: 3px;
+  border-top: var(--borderSize) solid white;
+  padding: 8px;
+}
+.note_list .note h1 {
+  font-size: 1.5rem;
+  line-height: 100%;
+}
+.note_list .note p {
+  line-height: calc(100% + 2.5px);
+  font-size: 0.85rem;
+}
+.note_list .note:last-child {
+  border-bottom: var(--borderSize) solid white;
 }/*# sourceMappingURL=style.css.map */
